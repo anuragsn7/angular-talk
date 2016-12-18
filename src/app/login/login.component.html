@@ -1,0 +1,14 @@
+<div class="form">
+    <h2>{{formTitle}}</h2>
+    <div class="col-6">
+        <label>Username</label>
+        <input [(ngModel)]="chosenUsername" class="form-input"/>
+    </div>
+    <div class="col-6">
+        <label>Port Number</label>
+        <input [(ngModel)]="chosenPortNumber" class="form-input" type="number" min="5000" value="5600"/>
+    </div>
+    <div class="col-12">
+        <button class="form-btn" (click)="onLoginClick()" [disabled]="disallowLogin()">Start!</button>
+    </div>
+</div>
